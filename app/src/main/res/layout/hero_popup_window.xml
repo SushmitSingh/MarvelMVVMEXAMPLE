@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_corner"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tvRealName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="5dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.14999998"
+                tools:text="Real Name" />
+
+            <ImageView
+                android:id="@+id/ivHero"
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_report_image"
+                app:layout_constraintBottom_toTopOf="@+id/tvName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="Hero Name"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvBio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivHero" />
+
+            <TextView
+                android:id="@+id/tvBio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autoLink="all"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvName"
+                app:layout_constraintStart_toStartOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                tools:text="Lets see how this works" />
+
+            <TextView
+                android:id="@+id/tvCreatedBy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvPublisher"
+                app:layout_constraintEnd_toEndOf="@+id/tvTeam"
+                app:layout_constraintStart_toStartOf="@+id/tvTeam"
+                app:layout_constraintTop_toBottomOf="@+id/tvTeam"
+                tools:text="Created By" />
+
+            <TextView
+                android:id="@+id/tvFirstAppearance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="First Appearance"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvTeam"
+                app:layout_constraintEnd_toEndOf="@+id/tvBio"
+                app:layout_constraintStart_toStartOf="@+id/tvBio"
+                app:layout_constraintTop_toBottomOf="@+id/tvBio"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tvTeam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvCreatedBy"
+                app:layout_constraintEnd_toEndOf="@+id/tvFirstAppearance"
+                app:layout_constraintStart_toStartOf="@+id/tvFirstAppearance"
+                app:layout_constraintTop_toBottomOf="@+id/tvFirstAppearance"
+                tools:text="Team" />
+
+
+            <TextView
+                android:id="@+id/tvPublisher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="Publisher"
+                android:textColor="@color/black"
+
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvCreatedBy"
+                app:layout_constraintStart_toStartOf="@+id/tvCreatedBy"
+                app:layout_constraintTop_toBottomOf="@+id/tvCreatedBy" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
